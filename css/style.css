@@ -3,26 +3,13 @@
 
 /*---------Global Style--------*/
 /*---------Define custom css variables------*/
-:root {
-  --bg-color-900: #000000;
-  --bg-color-100: #dddddd;
-  --bg-color-50: #eff0f4;
-  --bg-opacity: rgba(255, 255, 255, 0.5);
-  --text-color-900: #000000;
-  --text-color-700: #555555;
-  --text-color-600: #666666;
-  --text-color-300: #bbbbbb;
-  --outer-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
-  --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
-  --inner-shadow: inset 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
-  --inner-shadow-0: inset 0 0 0 #d0d0d0, inset 0 0 0 #f8f8f8;
-}
+
 /*--------override custom css variables for dark theme-----------*/
-body.dark {
+:root {
   --bg-color-900: #ffffff;
   --bg-color-100: #353535;
-  --bg-color-50: #2b2c2f;
-  --bg-opacity: rgba(43, 44, 47, 0.5);
+  --bg-color-50: #000000;
+  --bg-opacity: rgba(29, 30, 34, 0.5);
   --text-color-900: #ffffff;
   --text-color-700: #ffffff;
   --text-color-600: #bbbbbb;
@@ -127,9 +114,9 @@ img {
   z-index: -1;
 }
 .effect-1 {
-  width: 30px;
-  height: 30px;
-  border: 4px solid #8a49ff;
+  width: 70px;
+  height: 70px;
+  border: 5px solid #0b6ceb;
   right: 10%;
   bottom: 10%;
   animation: spin 10s linear infinite;
@@ -144,39 +131,39 @@ img {
   animation: topBounce 3s ease-in-out infinite;
 }
 .effect-2 div {
-  height: 3px;
-  width: 3px;
-  background-color: #ff9c07;
+  height: 4px;
+  width: 4px;
+  background-color: #f1ee06;
   margin: 0 3px 8px;
 }
 .effect-3 {
   height: 180px;
   width: 180px;
-  border: 25px solid var(--skin-color);
+  border: 15px solid var(--skin-color);
   border-radius: 50%;
   left: 50%;
-  top: -120px;
+  top: -100px;
   animation: leftBounce 3s ease-in-out infinite;
 }
 .effect-4 {
-  border-top: 30px solid transparent;
-  border-left: 30px solid #06d79c;
+  border-top: 50px solid transparent;
+  border-left: 50px solid #eff3f0;
   left: 30%;
   top: 20%;
   animation: spin 10s linear infinite;
 }
 .effect-4::before {
   content: "";
-  border-top: 30px solid transparent;
-  border-left: 30px solid #06d79c;
+  border-top: 50px solid transparent;
+  border-left: 50px solid #f5f8f6;
   position: absolute;
   opacity: 0.5;
-  left: -35px;
-  top: -25px;
+  left: -60px;
+  top: -40px;
 }
 .effect-5 {
-  height: 50px;
-  width: 50px;
+  height: 80px;
+  width: 80px;
   right: 8%;
   top: 30%;
   display: flex;
@@ -186,8 +173,8 @@ img {
   animation: spin 10s linear infinite;
 }
 .effect-5 div {
-  width: 1px;
-  background-color: #4dd0e1;
+  width: 1.5px;
+  background-color: #f709ef;
 }
 @keyframes spin {
   0% {
@@ -311,9 +298,9 @@ img {
   height: 40px;
   width: 40px;
   font-size: 36px;
-  color: var(--skin-color);
-  border-radius: 50%;
-  border: 2px solid var(--skin-color);
+  color: rgb(255, 62, 62);
+  border-radius: 20%;
+  border: 2px solid rgb(255, 54, 54);
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -503,7 +490,7 @@ img {
   margin-top: 30px;
 }
 .home-section .home-img .img-box {
-  max-width: 450px;
+  max-width: 350px;
   display: block;
   border-radius: 50%;
   margin: auto;
@@ -1205,78 +1192,4 @@ img {
   line-height: 40px;
 }
 
-/*------------Contact section----------------*/
-.contact-section {
-  padding: 80px 0 80px;
-  min-height: 100vh;
-}
-.contact-section .contact-item {
-  flex: 0 0 33.33%;
-  max-width: 33.33%;
-  padding: 15px;
-  display: flex;
-}
-.contact-section .contact-item-inner {
-  padding: 30px 15px;
-  text-align: center;
-  border-radius: 5px;
-  width: 100%;
-}
-.contact-section .contact-item-inner i {
-  font-size: 25px;
-  color: var(--skin-color);
-}
-.contact-section .contact-item-inner span {
-  display: block;
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text-color-700);
-  margin: 15px 0 10px;
-  text-transform: capitalize;
-}
-.contact-section .contact-item-inner p {
-  font-size: 16px;
-  color: var(--text-color-600);
-  line-height: 26px;
-  margin: 0;
-  word-break: break-word;
-}
-.contact-section .contact-form {
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-.contact-section .w-50 {
-  padding: 0 15px;
-  flex: 0 0 50%;
-  max-width: 50%;
-}
-.contact-section .input-group {
-  margin: 0 0 25px;
-  transition: all 0.3s ease;
-  border-radius: 30px;
-}
-.contact-section .input-group::after {
-  border-radius: 30px;
-}
-.contact-section .input-group .input-control {
-  height: 45px;
-  display: block;
-  width: 100%;
-  border-radius: 30px;
-  border: none;
-  background-color: transparent;
-  font-size: 16px;
-  padding: 0 15px;
-  color: var(--text-color-700);
-}
-.contact-section .input-group textarea.input-control {
-  height: 184px;
-  padding-top: 15px;
-  resize: none;
-}
-.contact-section .submit-btn {
-  flex: 0 0 100%;
-  max-width: 100%;
-  text-align: right;
-  padding: 0 15px;
-}
+/*------------footer----------------*/
